@@ -27,3 +27,23 @@ public:
         return mx;
     }
 };
+
+
+## Steps to Solve the Problem (Short Explanation)
+Use a Sliding Window:
+
+Maintain a sliding window using a set to ensure all elements in the window are unique.
+Iterate Through the Array:
+
+If the current element is already in the set, shrink the window by removing elements from the left until the current element can be added.
+Add Element to Window:
+
+Add the current element to the set and update the current sum.
+Check Window Size:
+
+If the window size equals k, calculate the maximum sum for this window, then remove the leftmost element to prepare for the next iteration.
+Return Result:
+
+After processing all elements, return the maximum sum found.
+Time Complexity: O(n)
+Space Complexity: O(k)
